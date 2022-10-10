@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxem Test</title>
+    <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="title_container row">
+            <h1 class="title col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                Рассчитайте стоимость автомобиля в лизинг
+            </h1>
+        </div>
+
+        <div class="input_container row">
+            <div class="box slidecontainer col-xl-4 col-md-12 col-sm-12 col-xs-12">
+                <h6 class="desc">Стоимость автомобиля</h6>
+                <div class="container">
+                    <h2 class="size">₽</h2>
+                    <input type="text" value="3300000" min="1000000" max="6000000" class="slider_input" id="i-1">
+                    <input type="range" min="1000000" max="6000000" value="3300000" class="slider" id="myRange-1">
+                </div>
+            </div>
+            <div class="box slidecontainer col-xl-4 col-md-12 col-sm-12 col-xs-12">
+                <h6 class="desc">Первоначальный взнос</h6>
+                <div class="container">
+                    <input type="text" class="back" value="13">
+                    <input type="text" value="420 000" class="slider_input" id="i-2" readonly>
+                    <input type="range" min="10" max="60" value="13" class="slider" id="myRange-2">
+                </div>
+            </div>
+            <div class="box slidecontainer col-xl-4 col-md-12 col-sm-12 col-xs-12">
+                <h6 class="desc">Срок лизинга</h6>
+                <div class="container">
+                    <h2 class="size">мес.</h2>
+                    <input type="text" value="60" min="1" max="60" class="slider_input" id="i-3">
+                    <input type="range" min="1" max="60" value="60" class="slider" id="myRange-3">
+                </div>
+            </div>
+        </div>
+
+        <div class="out_container row">
+            <div class="out_box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h6 class="desc">Сумма договора лизинга</h6>
+                <div class="out-1">---</div>
+            </div>
+            <div class="out_box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h6 class="desc">Ежемесячный платеж от</h6>
+                <div class="out-2">---</div>
+            </div>
+            <div class="out_box col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <button class="btn"><img class="rot" src="preloader/Ellipse.png" hidden>Оставить заявку</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

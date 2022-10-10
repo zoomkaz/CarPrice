@@ -1,0 +1,356 @@
+@import url("../fonts/Nekst/stylesheet.css");
+@import url("../fonts/Gilroy/stylesheet.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nekst-Black', sans-serif;
+}
+
+main {
+    max-width: 1440px;
+    padding: 0;
+    margin: 150px 50px;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 90%;
+    color: #111111;
+}
+
+.desc {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #575757;
+}
+
+.input_container {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+}
+
+.container h2,
+.container .back {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    width: 70px;
+    height: 55px;
+    background-color: #F3F3F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 36px;
+    color: #575757;
+}
+
+.size {
+    font-size: 30px !important;
+}
+
+.back {
+    background-color: #EBEBEC !important;
+    border: none;
+    padding: 15px;
+    width: 80px !important;
+}
+
+
+
+.slider_input {
+    width: 100%;
+    height: 68px;
+    padding: 16px 24px;
+    margin-top: 24px;
+    background: #F3F3F4;
+    border-radius: 16px;
+    border: none;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #575757;
+}
+
+.slidecontainer {
+    width: 100%;
+    /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 90%;
+    /* Full-width */
+    height: 2px;
+    /* Specified height */
+    background: #FF9514;
+    ;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    z-index: 1;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+.slider_input:focus {
+    outline: none;
+    background-color: #FFFFFF;
+    border: 2px solid #F3F3F4;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    width: 24px;
+    height: 24px;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    border-radius: 100%;
+    width: 20px;
+    /* Set a specific slider handle width */
+    height: 20px;
+    /* Slider handle height */
+    background: #FF9514;
+    ;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+    transition: all 0.2s linear;
+}
+
+.slider::-moz-range-thumb {
+    border-radius: 100%;
+    width: 20px;
+    /* Set a specific slider handle width */
+    height: 20px;
+    /* Slider handle height */
+    background: #FF9514;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.out_container {
+    margin-top: 54px;
+}
+
+.out-1,
+.out-2 {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 90%;
+    color: #333333;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.btn {
+    width: 100%;
+    height: 70px;
+    background: #FF9514;
+    border-radius: 40px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.btn:hover {
+    background: #111111;
+    transform: scale(1.02);
+}
+
+.btn:active {
+    background: #575757;
+    transform: scale(1.0);
+}
+
+.disabled {
+    opacity: 0.4 !important;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+
+    -webkit-animation-name: rotation;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotation;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -o-animation-name: rotation;
+    -o-animation-duration: 5s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(720deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (min-width: 1120px) and (max-width: 1439px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1119px) {
+    main {
+        margin: 50px 30px
+    }
+
+    .box {
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        margin-top: 44px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    main {
+        margin: 40px 20px;
+    }
+
+    .box {
+        margin-bottom: 16px;
+    }
+
+    .out-1,
+    .out-2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    main {
+        margin: 10px 10px
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .box {
+        margin-bottom: 16px;
+    }
+
+    .out-1,
+    .out-2 {
+        margin-bottom: 30px;
+    }
+}
