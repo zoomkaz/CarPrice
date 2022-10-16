@@ -63,6 +63,7 @@ precent.addEventListener('input', () => {
 })
 
 precent.addEventListener('change', () => {
+    precent.value = (precent.value).slice(0, 2)
     if (precent.value < 10) {
         precent.value = 10 + '%'
         initialRange.value = 10
